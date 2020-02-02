@@ -1,2 +1,2 @@
 # ruby-app-example
-Application exempla to run integration testing.
+Application example to run integration testing.
