@@ -4,5 +4,5 @@
   "image": "heroku/ruby",
   "repository": "https://github.com/robsonagapito/ruby-example",
   "keywords": ["ruby", "rails" ],
-  "addons": [""]
+  "addons": ["heroku-postgresql"]
 }
