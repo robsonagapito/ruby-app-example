@@ -1,1 +1,1 @@
-web: rails s
+worker: rails s
