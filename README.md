@@ -1,12 +1,15 @@
 # ruby-app-example
 Application example to run integration testing.
 
-install PostgreSQL
-bundle install
-rake db:setup
-rake db:migrate
-rails -s
+Ruby version: ruby-2.4.1
 
-Heroku:
+* Setup
+- install PostgreSQL
+- bundle install
+- rake db:setup
+- rake db:migrate
+- rails -s
 
-git push heroku master
+* Heroku:
+- git push heroku master
+- heroku run rake db:migrate
