@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  vara: MyString
+  numero_processo: MyString
+  natureza: MyString
+  partes: MyString
+  urgente: MyString
+  abrbitramento: MyString
+  assistente_social: MyString
+  data_entrada: 2020-02-09
+  data_saida: 2020-02-09
+  data_agendamento: 2020-02-09
+  status: MyString
+  observacao: MyString
+
+two:
+  vara: MyString
+  numero_processo: MyString
+  natureza: MyString
+  partes: MyString
+  urgente: MyString
+  abrbitramento: MyString
+  assistente_social: MyString
+  data_entrada: 2020-02-09
+  data_saida: 2020-02-09
+  data_agendamento: 2020-02-09
+  status: MyString
+  observacao: MyString

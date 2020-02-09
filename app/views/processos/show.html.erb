@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Vara:</strong>
+  <%= @processo.vara %>
+</p>
+
+<p>
+  <strong>Numero processo:</strong>
+  <%= @processo.numero_processo %>
+</p>
+
+<p>
+  <strong>Natureza:</strong>
+  <%= @processo.natureza %>
+</p>
+
+<p>
+  <strong>Partes:</strong>
+  <%= @processo.partes %>
+</p>
+
+<p>
+  <strong>Urgente:</strong>
+  <%= @processo.urgente %>
+</p>
+
+<p>
+  <strong>Abrbitramento:</strong>
+  <%= @processo.arbitramento %>
+</p>
+
+<p>
+  <strong>Assistente social:</strong>
+  <%= @processo.assistente_social %>
+</p>
+
+<p>
+  <strong>Data entrada:</strong>
+  <%= @processo.data_entrada %>
+</p>
+
+<p>
+  <strong>Data saida:</strong>
+  <%= @processo.data_saida %>
+</p>
+
+<p>
+  <strong>Data agendamento:</strong>
+  <%= @processo.data_agendamento %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @processo.status %>
+</p>
+
+<p>
+  <strong>Observacao:</strong>
+  <%= @processo.observacao %>
+</p>
+
+<%= link_to 'Edit', edit_processo_path(@processo) %> |
+<%= link_to 'Back', processos_path %>
