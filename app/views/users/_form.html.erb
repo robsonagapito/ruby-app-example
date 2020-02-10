@@ -11,23 +11,29 @@
     </div>
   <% end %>
 
+  <br>
+  <br>
   <div class="field">
-    <%= f.label :login %><br>
+    <b class="ls-label-text"> <%= f.label :login %> </b>
+    <p class="ls-label-info">Digite o seu login<p>
     <%= f.text_field :login %>
   </div>
   <div class="field">
-    <%= f.label :full_name %><br>
+    <b class="ls-label-text">Nome completo</b>
+    <p class="ls-label-info">Digite o seu Nome completo<p>
     <%= f.text_field :full_name %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
+    <b class="ls-label-text"><%= f.label :email %></b>
+    <p class="ls-label-info">Digite o seu Nome completo<p>
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :age %><br>
+    <b class="ls-label-text">Idade</b>
+    <p class="ls-label-info">Digite a idade do usuário<p>
     <%= f.number_field :age %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="ls-actions-btn">
+    <%= f.submit 'Salvar', :class => "ls-btn-primary" %>
   </div>
 <% end %>

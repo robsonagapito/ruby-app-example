@@ -2,21 +2,16 @@
 
 <h1>Processos</h1>
 
-<table>
+<table class="ls-table">
   <thead>
     <tr>
       <th>Vara</th>
-      <th>Numero processo</th>
+      <th class="hidden-xs">Numero processo</th>
       <th>Natureza</th>
-      <th>Partes</th>
-      <th>Urgente</th>
-      <th>Arbitramento</th>
+      <th class="hidden-xs">Partes</th>
       <th>Assistente social</th>
-      <th>Data entrada</th>
-      <th>Data saida</th>
-      <th>Data agendamento</th>
+      <th class="hidden-xs">Data entrada</th>
       <th>Status</th>
-      <th>Observacao</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -25,20 +20,15 @@
     <% @processos.each do |processo| %>
       <tr>
         <td><%= processo.vara %></td>
-        <td><%= processo.numero_processo %></td>
+        <td class="hidden-xs"><%= processo.numero_processo %></td>
         <td><%= processo.natureza %></td>
-        <td><%= processo.partes %></td>
-        <td><%= processo.urgente %></td>
-        <td><%= processo.arbitramento %></td>
+        <td class="hidden-xs"><%= processo.partes %></td>
         <td><%= processo.assistente_social %></td>
-        <td><%= processo.data_entrada %></td>
-        <td><%= processo.data_saida %></td>
-        <td><%= processo.data_agendamento %></td>
+        <td class="hidden-xs"><%= processo.data_entrada %></td>
         <td><%= processo.status %></td>
-        <td><%= processo.observacao %></td>
-        <td><%= link_to 'Show', processo %></td>
-        <td><%= link_to 'Edit', edit_processo_path(processo) %></td>
-        <td><%= link_to 'Destroy', processo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', processo, class: "ls-btn-primary" %></td>
+        <td class="hidden-xs"><%= link_to 'Editar', edit_processo_path(processo), class: "ls-btn" %></td>
+        <td><%= link_to 'Apagar', processo, method: :delete, data: { confirm: 'Are you sure?' }, class: "ls-btn-primary-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -46,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Processo', new_processo_path %>
+<%= link_to 'Novo Processo', new_processo_path, class: "ls-btn-dark" %>
