@@ -1,13 +1,10 @@
 <%= form_for(processo) do |f| %>
   <% if processo.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(processo.errors.count, "error") %> prohibited this processo from being saved:</h2>
-
-      <ul>
-      <% processo.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <br>
+      <% @processo.errors.full_messages.each do |message| %>
+        <p class="ls-alert-danger"><%= message %></p>
       <% end %>
-      </ul>
     </div>
   <% end %>
 
@@ -49,8 +46,8 @@
   <div class="field">
     <b class="ls-label-text">Arbitramento</b>
     <p class="ls-label-info">O processo é de arbitramento?</p>
-    <%= radio_button f, :arbitramento, "N", checked: "checked" %> Não 
-    <%= radio_button f, :arbitramento, "S" %> Sim 
+    <%= f.radio_button :arbitramento, "N", checked: "checked" %> Não 
+    <%= f.radio_button :arbitramento, "S" %> Sim 
     
   </div>
   <br>

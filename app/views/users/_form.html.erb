@@ -1,17 +1,13 @@
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
+      <br>
       <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <p class="ls-alert-danger"><%= message %></p>
       <% end %>
-      </ul>
     </div>
   <% end %>
 
-  <br>
   <br>
   <div class="field">
     <b class="ls-label-text"> <%= f.label :login %> </b>

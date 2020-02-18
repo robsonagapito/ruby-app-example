@@ -28,7 +28,7 @@ class ProcessosController < ApplicationController
 
     respond_to do |format|
       if @processo.save
-        format.html { redirect_to @processo, notice: 'Processo was successfully created.' }
+        format.html { redirect_to @processo, notice: 'Processo foi criado com sucesso.' }
         format.json { render :show, status: :created, location: @processo }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ProcessosController < ApplicationController
   def update
     respond_to do |format|
       if @processo.update(processo_params)
-        format.html { redirect_to @processo, notice: 'Processo was successfully updated.' }
+        format.html { redirect_to @processo, notice: 'Processo atualizado com sucesso.' }
         format.json { render :show, status: :ok, location: @processo }
       else
         format.html { render :edit }
@@ -54,10 +54,9 @@ class ProcessosController < ApplicationController
   # DELETE /processos/1
   # DELETE /processos/1.json
   def destroy
-    @processo = Processo.find(params[:id])
     @processo.destroy
     respond_to do |format|
-      format.html { redirect_to action: :index, notice: 'Processo was successfully destroyed.' }
+      format.html { redirect_to action: :index, notice: 'Processo foi apagado com sucesso.' }
       format.json { head :no_content }
     end
     

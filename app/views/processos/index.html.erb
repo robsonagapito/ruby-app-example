@@ -1,6 +1,11 @@
-<p id="notice"><%= notice %></p>
-
 <h1 id="titulo">Processos</h1>
+
+<% if notice.to_s != '' %>
+  <div class="ls-alert-success">
+    <p id="notice"><%= notice %></p>
+  </div>
+<% end %>
+<br>
 
 <table class="ls-table">
   <thead>
@@ -28,7 +33,7 @@
         <td id="status_<%= processo.id %>"><%= processo.status %></td>
         <td id="btn-show_<%= processo.id %>"><%= link_to 'Mostrar', processo, class: "ls-btn-primary" %></td>
         <td class="hidden-xs" id="btn-edit_<%= processo.id %>"><%= link_to 'Editar', edit_processo_path(processo), class: "ls-btn" %></td>
-        <td id="btn-delete_<%= processo.id %>"><%= link_to 'Apagar', processo, method: :delete, data: { confirm: 'Are you sure?' }, class: "ls-btn-primary-danger" %></td>
+        <td id="btn-delete_<%= processo.id %>"><%= link_to 'Apagar', processo, method: :delete, data: { confirm: 'Deseja deletar o processo?' }, class: "ls-btn-primary-danger" %></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,6 +1,11 @@
-<p id="notice"><%= notice %></p>
-
 <h1 id="titulo">Listing Users</h1>
+
+<% if notice.to_s != '' %>
+  <div class="ls-alert-success">
+    <p id="notice"><%= notice %></p>
+  </div>
+<% end %>
+<br>
 
 <table class="ls-table">
   <thead>
@@ -24,7 +29,7 @@
         <td id="age_<%= user.id %>"><%= user.age %></td>
         <td id="btn-show_<%= user.id %>"><%= link_to 'Mostrar', user, class: "ls-btn-primary" %></td>
         <td id="btn-edit_<%= user.id %>"><%= link_to 'Editar', edit_user_path(user), class: "ls-btn"  %></td>
-        <td id="btn-delete_<%= user.id %>"><%= link_to 'Apagar', user, method: :destroy, data: { confirm: 'Are you sure?' }, class: "ls-btn-primary-danger" %></td>
+        <td id="btn-delete_<%= user.id %>"><%= link_to 'Apagar', user, method: :delete, data: { confirm: 'Deseja deletar o usuário?' }, class: "ls-btn-primary-danger" %></td>
       </tr>
     <% end %>
   </tbody>

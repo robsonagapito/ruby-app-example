@@ -1,4 +1,9 @@
-<p id="notice"><%= notice %></p>
+<% if notice.to_s != '' %>
+  <div class="ls-alert-success">
+    <p id="notice"><%= notice %></p>
+  </div>
+<% end %>
+<br>
 
 <p>
   <strong>Vara:</strong>
