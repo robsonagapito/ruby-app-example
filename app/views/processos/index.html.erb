@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Processos</h1>
+<h1 id="titulo">Processos</h1>
 
 <table class="ls-table">
   <thead>
@@ -19,16 +19,16 @@
   <tbody>
     <% @processos.each do |processo| %>
       <tr>
-        <td><%= processo.vara %></td>
-        <td class="hidden-xs"><%= processo.numero_processo %></td>
-        <td><%= processo.natureza %></td>
-        <td class="hidden-xs"><%= processo.partes %></td>
-        <td><%= processo.assistente_social %></td>
-        <td class="hidden-xs"><%= processo.data_entrada %></td>
-        <td><%= processo.status %></td>
-        <td><%= link_to 'Mostrar', processo, class: "ls-btn-primary" %></td>
-        <td class="hidden-xs"><%= link_to 'Editar', edit_processo_path(processo), class: "ls-btn" %></td>
-        <td><%= link_to 'Apagar', processo, method: :delete, data: { confirm: 'Are you sure?' }, class: "ls-btn-primary-danger" %></td>
+        <td id="vara_<%= processo.id %>"><%= processo.vara %></td>
+        <td class="hidden-xs"  id="numero_<%= processo.id %>"><%= processo.numero_processo %></td>
+        <td id="natureza_<%= processo.id %>"><%= processo.natureza %></td>
+        <td class="hidden-xs" id="partes_<%= processo.id %>"><%= processo.partes %></td>
+        <td id="as_<%= processo.id %>"><%= processo.assistente_social %></td>
+        <td class="hidden-xs" id="data-ent_<%= processo.id %>"><%= processo.data_entrada %></td>
+        <td id="status_<%= processo.id %>"><%= processo.status %></td>
+        <td id="btn-show_<%= processo.id %>"><%= link_to 'Mostrar', processo, class: "ls-btn-primary" %></td>
+        <td class="hidden-xs" id="btn-edit_<%= processo.id %>"><%= link_to 'Editar', edit_processo_path(processo), class: "ls-btn" %></td>
+        <td id="btn-delete_<%= processo.id %>"><%= link_to 'Apagar', processo, method: :delete, data: { confirm: 'Are you sure?' }, class: "ls-btn-primary-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'Novo Processo', new_processo_path, class: "ls-btn-dark" %>
+<%= link_to 'Novo Processo', new_processo_path, class: "ls-btn-dark", id:"btn-novo" %>

@@ -27,16 +27,16 @@
     <!-- Dropdown com detalhes da conta de usuário -->
     <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
       <a href="#" class="ls-ico-user">
-        <img src="/locawebstyle/assets/images/locastyle/avatar-example.jpg" alt="" />
+        <!-- <img src="/locawebstyle/assets/images/locastyle/avatar-example.jpg" alt="" /> -->
         <span class="ls-name">Robson Agapito</span>
         (robsonagapito)
       </a>
 
       <nav class="ls-dropdown-nav ls-user-menu">
         <ul>
-          <li><a href="#">Usuários</a></li>
-          <li><a href="#">Processos</a></li>
-          <li><a href="#">Sair</a></li>
+          <li><a href="/users" id="user01">Usuários</a></li>
+          <li><a href="/processos" id="processo01">Processos</a></li>
+          <li><a href="#" id="sair01">Sair</a></li>
          </ul>
       </nav>
     </div>
@@ -65,9 +65,9 @@
 
       <nav class="ls-menu">
         <ul>
-           <li><a href="/" class="ls-ico-dashboard" title="Dashboard">Dashboard</a></li>
-           <li><a href="/users" class="ls-ico-users" title="Usuárioss">Usuários</a></li>
-           <li><a href="/processos" class="ls-ico-stats" title="Processos">Processos</a></li>
+           <li><a href="/" class="ls-ico-dashboard"  id="dashboard" title="Dashboard">Dashboard</a></li>
+           <li><a href="/users" class="ls-ico-users" id="users" title="Usuários">Usuários</a></li>
+           <li><a href="/processos" class="ls-ico-stats" id="processos" title="Processos">Processos</a></li>
            <!-- li>
             <a href="#" class="ls-ico-cog" title="Configurações">Configurações</a>
             <ul>

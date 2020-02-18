@@ -33,7 +33,8 @@
     <p class="ls-label-info">Digite a idade do usuário<p>
     <%= f.number_field :age %>
   </div>
-  <div class="ls-actions-btn">
-    <%= f.submit 'Salvar', :class => "ls-btn-primary" %>
-  </div>
+  <hr/>
+  <%= submit_tag 'Salvar', class: "ls-btn-primary", id: "btn-save", data: { disable_with: false } %>
+  <%= link_to 'Mostrar', @user, class: "ls-btn" , id: "btn-show" %>
+  <%= link_to 'Cancelar', users_path, class: "ls-btn-primary-danger", id: "btn-cancel" %>
 <% end %>

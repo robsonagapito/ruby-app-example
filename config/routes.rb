@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   resources :processos
   resources :users
+
+  # DELETE /processos/:id(.:format)                     processos#destroy
+  # DELETE /users/:id(.:format)                         users#destroy
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

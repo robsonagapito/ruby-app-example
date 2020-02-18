@@ -11,67 +11,91 @@
     </div>
   <% end %>
 
+  <br>
+  <br>
   <div class="field">
-    <%= f.label :vara %>
+    <b class="ls-label-text"><%= f.label :vara %>
+    <p class="ls-label-info">Digite a vara que o processo pertence<p>  
     <%= f.text_field :vara %>
   </div>
 
   <div class="field">
-    <%= f.label :numero_processo %>
+    <b class="ls-label-text"><%= f.label :numero_processo %>
+    <p class="ls-label-info">Digite o número do processo<p>
     <%= f.text_field :numero_processo %>
   </div>
 
   <div class="field">
-    <%= f.label :natureza %>
+    <b class="ls-label-text"><%= f.label :natureza %>
+    <p class="ls-label-info">Informe a natureza do processo<p>
     <%= f.text_field :natureza %>
   </div>
 
   <div class="field">
-    <%= f.label :partes %>
+    <b class="ls-label-text"><%= f.label :partes %>
+    <p class="ls-label-info">Informe as partes do processo<p>  
     <%= f.text_field :partes %>
   </div>
 
   <div class="field">
-    <%= f.label :urgente %>
-    <%= f.text_field :urgente %>
+    <b class="ls-label-text">Urgente</b>
+    <p class="ls-label-info">O processo é Urgente?</p>
+    <div class="ls-custom-select ls-field-sm">       
+      <%= f.select :urgente, [["Não","N"],["Sim","S"]], class: "ls-custom", id: "status"%>
+    </div>      
   </div>
+   <br>
 
   <div class="field">
-    <%= f.label :arbitramento %>
-    <%= f.text_field :arbitramento %>
+    <b class="ls-label-text">Arbitramento</b>
+    <p class="ls-label-info">O processo é de arbitramento?</p>
+    <%= radio_button f, :arbitramento, "N", checked: "checked" %> Não 
+    <%= radio_button f, :arbitramento, "S" %> Sim 
+    
   </div>
+  <br>
 
   <div class="field">
-    <%= f.label :assistente_social %>
+    <b class="ls-label-text"><%= f.label :assistente_social %>
+    <p class="ls-label-info">Informe a Assistente Social do processo<p> 
     <%= f.text_field :assistente_social %>
   </div>
 
-  <div class="field">
-    <%= f.label :data_entrada %>
-    <%= f.date_select :data_entrada %>
+  <div class="field"> 
+    <b class="ls-label-text"><%= f.label :data_entrada %>
+    <p class="ls-label-info">Informe data de entrada do processo<p>     
+     <%= f.text_field :data_entrada, data:{ provide: 'datepicker' } %>
   </div>
 
   <div class="field">
-    <%= f.label :data_saida %>
-    <%= f.date_select :data_saida %>
+    <b class="ls-label-text"><%= f.label :data_saida %>
+    <p class="ls-label-info">Informe a data de saída do processo<p>   
+    <%= f.text_field :data_saida, data:{ provide: 'datepicker' } %>
   </div>
 
   <div class="field">
-    <%= f.label :data_agendamento %>
-    <%= f.date_select :data_agendamento %>
+    <b class="ls-label-text"><%= f.label :data_agendamento %>
+    <p class="ls-label-info">Informe a data do agendamento do processo<p> 
+    <%= f.text_field :data_agendamento, data:{ provide: 'datepicker' } %>
   </div>
 
   <div class="field">
-    <%= f.label :status %>
+    <b class="ls-label-text"><%= f.label :status %>
+    <p class="ls-label-info">Informe o status do processo<p>   
     <%= f.text_field :status %>
   </div>
 
   <div class="field">
-    <%= f.label :observacao %>
-    <%= f.text_field :observacao %>
+    <b class="ls-label-text"><%= f.label :observacao %>
+    <p class="ls-label-info">Informe observações importantes do processo<p>   
+    <%= f.text_area :observacao, size: "50x15" %>
   </div>
 
+  <hr/>
+  
   <div class="actions">
-    <%= f.submit %>
+    <%= submit_tag 'Salvar', class: "ls-btn-primary", id: "btn-save", data: { disable_with: false } %>
+    <%= link_to 'Mostrar', @processo, class: "ls-btn" , id: "btn-show" %>
+    <%= link_to 'Cancelar', processos_path, class: "ls-btn-primary-danger", id: "btn-cancel" %>
   </div>
 <% end %>

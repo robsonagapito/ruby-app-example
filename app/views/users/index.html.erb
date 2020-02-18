@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Users</h1>
+<h1 id="titulo">Listing Users</h1>
 
 <table class="ls-table">
   <thead>
@@ -17,14 +17,14 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.id %></td>
-        <td class="hidden-xs"><%= user.login %></td>
-        <td><%= user.full_name %></td>
-        <td class="hidden-xs"><%= user.email %></td>
-        <td><%= user.age %></td>
-        <td><%= link_to 'Mostrar', user, class: "ls-btn-primary" %></td>
-        <td><%= link_to 'Editar', edit_user_path(user), class: "ls-btn"  %></td>
-        <td><%= link_to 'Apagar', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "ls-btn-primary-danger" %></td>
+        <td id="id_<%= user.id %>"><%= user.id %></td>
+        <td class="hidden-xs" id="login_<%= user.id %>"><%= user.login %></td>
+        <td id="full-name_<%= user.id %>"><%= user.full_name %></td>
+        <td class="hidden-xs" id="email_<%= user.id %>"><%= user.email %></td>
+        <td id="age_<%= user.id %>"><%= user.age %></td>
+        <td id="btn-show_<%= user.id %>"><%= link_to 'Mostrar', user, class: "ls-btn-primary" %></td>
+        <td id="btn-edit_<%= user.id %>"><%= link_to 'Editar', edit_user_path(user), class: "ls-btn"  %></td>
+        <td id="btn-delete_<%= user.id %>"><%= link_to 'Apagar', user, method: :destroy, data: { confirm: 'Are you sure?' }, class: "ls-btn-primary-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'Novo Usuário', new_user_path, class: "ls-btn-dark" %>
+<%= link_to 'Novo Usuário', new_user_path, id:"btn-new" , class: "ls-btn-dark" %>

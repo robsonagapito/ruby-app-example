@@ -54,11 +54,13 @@ class ProcessosController < ApplicationController
   # DELETE /processos/1
   # DELETE /processos/1.json
   def destroy
+    @processo = Processo.find(params[:id])
     @processo.destroy
     respond_to do |format|
-      format.html { redirect_to processos_url, notice: 'Processo was successfully destroyed.' }
+      format.html { redirect_to action: :index, notice: 'Processo was successfully destroyed.' }
       format.json { head :no_content }
     end
+    
   end
 
   private
