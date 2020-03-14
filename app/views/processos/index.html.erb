@@ -10,13 +10,14 @@
 <table class="ls-table">
   <thead>
     <tr>
-      <th>Vara</th>
-      <th class="hidden-xs">Numero processo</th>
-      <th>Natureza</th>
-      <th class="hidden-xs">Partes</th>
-      <th>Assistente social</th>
-      <th class="hidden-xs">Data entrada</th>
-      <th>Status</th>
+      <th>Código</th>
+      <th class="hidden-xs">Vara</th>
+      <th>Numero processo</th>
+      <th class="hidden-xs">Natureza</th>
+      <th>Partes</th>
+      <th class="hidden-xs">Assistente social</th>
+      <th>Data entrada</th>
+      <th class="hidden-xs">Status</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,13 +25,14 @@
   <tbody>
     <% @processos.each do |processo| %>
       <tr>
-        <td id="vara_<%= processo.id %>"><%= processo.vara %></td>
-        <td class="hidden-xs"  id="numero_<%= processo.id %>"><%= processo.numero_processo %></td>
-        <td id="natureza_<%= processo.id %>"><%= processo.natureza %></td>
-        <td class="hidden-xs" id="partes_<%= processo.id %>"><%= processo.partes %></td>
-        <td id="as_<%= processo.id %>"><%= processo.assistente_social %></td>
-        <td class="hidden-xs" id="data-ent_<%= processo.id %>"><%= processo.data_entrada %></td>
-        <td id="status_<%= processo.id %>"><%= processo.status %></td>
+        <td id="codigo_<%= processo.id %>"><%= processo.id %></td>
+        <td class="hidden-xs" id="vara_<%= processo.id %>"><%= processo.vara %></td>
+        <td id="numero_<%= processo.id %>"><%= processo.numero_processo %></td>
+        <td class="hidden-xs" id="natureza_<%= processo.id %>"><%= processo.natureza %></td>
+        <td id="partes_<%= processo.id %>"><%= processo.partes %></td>
+        <td class="hidden-xs" id="as_<%= processo.id %>"><%= processo.assistente_social %></td>
+        <td id="data-ent_<%= processo.id %>"><%= processo.data_entrada %></td>
+        <td class="hidden-xs" id="status_<%= processo.id %>"><%= processo.status %></td>
         <td id="btn-show_<%= processo.id %>"><%= link_to 'Mostrar', processo, class: "ls-btn-primary" %></td>
         <td class="hidden-xs" id="btn-edit_<%= processo.id %>"><%= link_to 'Editar', edit_processo_path(processo), class: "ls-btn" %></td>
         <td id="btn-delete_<%= processo.id %>"><%= link_to 'Apagar', processo, method: :delete, data: { confirm: 'Deseja deletar o processo?' }, class: "ls-btn-primary-danger" %></td>
