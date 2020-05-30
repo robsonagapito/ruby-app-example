@@ -56,7 +56,7 @@ class ProcessosController < ApplicationController
   def destroy
     @processo.destroy
     respond_to do |format|
-      format.html { redirect_to action: :index, notice: 'Processo foi apagado com sucesso.' }
+      format.html { redirect_to processos_path, notice: 'Processo foi apagado com sucesso.' }
       format.json { head :no_content }
     end
     

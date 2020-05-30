@@ -2,7 +2,7 @@
   "name": "Lecture - Example Ruby App to use Integration Testing",
   "description": "A Rails app, which can easily be deployed to Heroku",
   "image": "heroku/ruby",
-  "repository": "https://github.com/robsonagapito/ruby-example",
+  "repository": "https://github.com/robsonagapito/ruby-app-sexample",
   "keywords": ["ruby", "rails" ],
   "addons": ["heroku-postgresql"]
 }

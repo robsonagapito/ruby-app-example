@@ -87,12 +87,9 @@
     <p class="ls-label-info">Informe observações importantes do processo<p>   
     <%= f.text_area :observacao, size: "50x15" %>
   </div>
-
   <hr/>
-  
-  <div class="actions">
-    <%= submit_tag 'Salvar', class: "ls-btn-primary", id: "btn-save", data: { disable_with: false } %>
-    <%= link_to 'Mostrar', @processo, class: "ls-btn" , id: "btn-show" %>
-    <%= link_to 'Cancelar', processos_path, class: "ls-btn-primary-danger", id: "btn-cancel" %>
-  </div>
+  <%= submit_tag 'Salvar', class: "ls-btn-primary", id: "btn-save", data: { disable_with: false } %>
+  <%= link_to 'Mostrar', @processo, class: "ls-btn" , id: "btn-show" %>
+  <%= link_to 'Cancelar', processos_path, class: "ls-btn-primary-danger", id: "btn-cancel" %>
+  <br>
 <% end %>

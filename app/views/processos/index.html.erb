@@ -1,3 +1,4 @@
+<br>
 <h1 id="titulo">Processos</h1>
 
 <% if notice.to_s != '' %>
@@ -5,6 +6,10 @@
     <p id="notice"><%= notice %></p>
   </div>
 <% end %>
+<br>
+
+<%= link_to 'Novo Processo', new_processo_path, class: "ls-btn-dark", id:"btn-novo" %>
+
 <br>
 
 <table class="ls-table">
@@ -40,7 +45,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'Novo Processo', new_processo_path, class: "ls-btn-dark", id:"btn-novo" %>
