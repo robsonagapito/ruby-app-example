@@ -13,4 +13,4 @@ Ruby version: ruby-2.4.1
 * Heroku:
 - git push heroku master
 - heroku run rake db:migrate
-- heroku logs --tail
+- heroku logs --tail 
