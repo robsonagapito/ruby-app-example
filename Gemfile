@@ -7,7 +7,8 @@ gem 'rails', '~> 5.0.0'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3', '~> 1.3.13'
 #PostgreSQL
-gem 'pg','1.3.1'
+#gem 'pg','1.3.1' # windows
+gem 'pg','~> 0.18'
 gem 'tzinfo-data'
 
 # Use SCSS for stylesheets
