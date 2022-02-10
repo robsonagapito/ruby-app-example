@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '>= 2.4.1', '< 2.7'
+ruby '>= 2.5', '< 2.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 # gem 'rails', '4.2.1'
@@ -7,7 +7,9 @@ gem 'rails', '~> 5.0.0'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3', '~> 1.3.13'
 #PostgreSQL
-gem 'pg', '~> 0.18'
+gem 'pg','1.3.1'
+gem 'tzinfo-data'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -29,6 +31,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails_12factor'  
 
 gem 'rb-readline'
+
+gem 'puma'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
