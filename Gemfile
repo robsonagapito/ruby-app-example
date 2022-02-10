@@ -8,7 +8,7 @@ gem 'rails', '~> 5.0.0'
 # gem 'sqlite3', '~> 1.3.13'
 #PostgreSQL
 #gem 'pg','1.3.1' # windows
-gem 'pg','~> 0.18'
+gem 'pg','~> 0.18.0'
 gem 'tzinfo-data'
 
 # Use SCSS for stylesheets
