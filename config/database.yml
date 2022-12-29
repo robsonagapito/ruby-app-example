@@ -1,23 +1,36 @@
-default: &default
+# default: &default
+#   adapter: sqlite3
+#   # adapter: postgresql
+#   encoding: unicode
+#   pool: 5
+#   timeout: 5000
+
+development:
+  # <<: *default
   # adapter: sqlite3
   adapter: postgresql
   encoding: unicode
   pool: 5
   timeout: 5000
-
-development:
-  <<: *default
   database: testing-training_development 
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
+  # <<: *default
+  # adapter: sqlite3
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
   database: testing-training_test 
 
 production:
-  <<: *default
-  database: testing-training_production
-  username: testing-training 
-  password: <%= ENV['RUBY-APP-EXAMPLE_DATABASE_PASSWORD'] %>
+  # <<: *default
+  # adapter: sqlite3
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  url: <%= ENV['DATABASE_URL'] %>
