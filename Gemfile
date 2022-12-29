@@ -3,7 +3,7 @@ ruby '>= 3.1.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 # gem 'rails', '4.2.1'
-gem 'rails', '~> 6.1.0', '>= 6.1.3.2'
+gem 'rails', '~> 6.1.0', '>= 6.1.4.6'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3', '~> 1.3.6'
 #PostgreSQL
@@ -33,7 +33,7 @@ gem 'json', '2.3.1'
 
 gem 'rb-readline'
 
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 4.3.12'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
