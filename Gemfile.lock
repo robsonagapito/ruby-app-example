@@ -75,8 +75,9 @@ GEM
     date (3.3.3)
     erubi (1.12.0)
     execjs (2.8.1)
+    ffi (1.15.5)
     ffi (1.15.5-x64-mingw-ucrt)
-    globalid (1.0.0)
+    globalid (1.0.1)
       activesupport (>= 5.0)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
@@ -99,7 +100,7 @@ GEM
     marcel (1.0.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
-    minitest (5.16.3)
+    minitest (5.17.0)
     net-imap (0.3.4)
       date
       net-protocol
@@ -112,6 +113,9 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.10-x64-mingw-ucrt)
       racc (~> 1.4)
+    nokogiri (1.13.10-x86_64-linux)
+      racc (~> 1.4)
+    pg (1.4.5)
     pg (1.4.5-x64-mingw-ucrt)
     puma (4.3.12)
       nio4r (~> 2.0)
@@ -193,6 +197,7 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
+  x86_64-linux
 
 DEPENDENCIES
   coffee-rails (~> 4.2)
