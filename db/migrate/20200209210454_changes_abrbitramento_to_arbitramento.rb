@@ -1,4 +1,4 @@
-class ChangesAbrbitramentoToArbitramento < ActiveRecord::Migration[5.0]
+class ChangesAbrbitramentoToArbitramento < ActiveRecord::Migration[6.1]
   def change
     rename_column :processos, :abrbitramento, :arbitramento
   end

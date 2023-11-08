@@ -1,4 +1,4 @@
-class CreateProcessos < ActiveRecord::Migration[5.0]
+class CreateProcessos < ActiveRecord::Migration[6.1]
   def change
     create_table :processos do |t|
       t.string :vara

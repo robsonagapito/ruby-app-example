@@ -1,36 +1,8 @@
-# default: &default
-#   adapter: sqlite3
-#   # adapter: postgresql
-#   encoding: unicode
-#   pool: 5
-#   timeout: 5000
-
 development:
-  # <<: *default
-  # adapter: sqlite3
-  adapter: postgresql
-  encoding: unicode
+  adapter: sqlite3
+  database: db/development.sqlite3
   pool: 5
   timeout: 5000
-  database: testing-training_development 
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
-test:
-  # <<: *default
-  # adapter: sqlite3
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-  timeout: 5000
-  database: testing-training_test 
 
-production:
-  # <<: *default
-  # adapter: sqlite3
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-  timeout: 5000
-  url: <%= ENV['DATABASE_URL'] %>
+  # DATABASE_URL = postgres://qwmrinrndqmdlx:337f64ef5ba93281c2a9d8e58f8e028bdef2231719c539f027d2dd4840c495d2@ec2-3-217-251-77.compute-1.amazonaws.com:5432/d46ug8bina7j0k
