@@ -14,8 +14,9 @@ gem 'json', '2.3.1'
 gem 'rb-readline'
 gem 'puma', '~> 4.3.12'
 gem 'dalli'
-gem 'sqlite3', '~> 1.4',  platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
+# gem 'sqlite3', '~> 1.4',  platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'sqlite3'
+gem 'thin'
 group :development, :test do
   gem 'web-console'
   gem 'spring'
